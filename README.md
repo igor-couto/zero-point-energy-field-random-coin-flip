@@ -1,9 +1,11 @@
 # Quantum Zero Point Energy Field Coin Flipper
 
-## About
-
 A true random coin flip generator, powered by a quantum zero point energy field in vacuum.
 Because computer entropy is for loosers.
+
+## How it works
+
+Using the [ANU QRNG](https://qrng.anu.edu.au/) API, the random numbers are generated in real-time in our lab by measuring the quantum fluctuations of the vacuum
 
 ## Running the project
 
