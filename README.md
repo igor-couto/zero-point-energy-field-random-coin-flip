@@ -5,7 +5,7 @@ Because computer entropy is for loosers.
 
 ## How it works
 
-Using the [ANU QRNG](https://qrng.anu.edu.au/) API, the random numbers are generated in real-time in our lab by measuring the quantum fluctuations of the vacuum
+Using the [ANU QRNG](https://qrng.anu.edu.au/) API, the random numbers are generated in real-time in the lab by measuring the quantum fluctuations of the vacuum.
 
 ## Running the project
 
