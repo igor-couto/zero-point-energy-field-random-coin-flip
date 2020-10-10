@@ -1,18 +1,18 @@
 #coin {
-    position: relative;
-    margin: 0 auto;
+    position: absolute;
+    top: 10%;
     width: 100px;
     height: 100px;
     cursor: pointer;
-
     transition: transform 1s ease-in;
     transform-style: preserve-3d;
 }
 
-.coin {
+#coin img {
     height: 25vmin;
     pointer-events: none;
     position: absolute;
+    margin-left: -100%;
 }
 
 .heads {
@@ -23,7 +23,6 @@
 @keyframes flip-heads {
     from {
         transform: rotateY(0deg);
-        
     }
     to {
         transform: rotateY(360deg);
