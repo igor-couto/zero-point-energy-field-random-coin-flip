@@ -6,63 +6,83 @@ import {Settings} from '../../settings/settings';
 
 export default function Coin() {
     
-    const [coinState, setCoinState] = useState('cara');
+    const [coinSide, setCoinSide] = useState('tails');
+    const [isFlipping, setFlipping] = useState(false);
+
+    let coinHeadsElement : HTMLElement | null;
+    let coinTailsElement : HTMLElement | null;
+
+    const animationTime = 1000;
 
     const Flip = async function (){
 
-        // Begin Animation
-        const coinHeads = document.getElementById("coinHeads");
-        coinHeads!.removeAttribute("class");
-        void coinHeads!.offsetWidth;
-        coinHeads!.classList.add("coin");
-        coinHeads!.classList.add("heads");
+        coinHeadsElement = document.getElementById("coinHeads");
+        coinTailsElement = document.getElementById("coinTails");
 
-        const coinTails = document.getElementById("coinTails");
-        coinTails!.removeAttribute("class");
-        void coinTails!.offsetWidth;
-        coinTails!.classList.add("coin");
-        coinTails!.classList.add("tails");
+        if(isFlipping) return;
 
-        // API Request
+        setFlipping(true);
+
+        BeginAnimation();
+        FlipCoin();
+
+        setTimeout(function () {
+            StopAnimation();
+            SetResult();
+        }, animationTime);
+
+        setFlipping(false);
+    }
+
+    async function FlipCoin(){
         const response = await fetch(Settings.API);
         const responseModels = await response.json();
 
-        if(responseModels.data[0] % 2 == 0)
-            setCoinState('cara');
+        if(responseModels.data[0] % 2 === 0)
+            setCoinSide('tails');
         else 
-            setCoinState('coroa');
+            setCoinSide('heads');
+    }
 
+    function SetResult(){
+        if(coinSide === 'tails'){
+            coinHeadsElement!.style.zIndex = "0";
+            coinTailsElement!.style.zIndex = "100";
+        }
+        else {
+            coinHeadsElement!.style.zIndex = "100";
+            coinTailsElement!.style.zIndex = "0";
+        } 
+    }
 
-        setTimeout(function () {
+    function BeginAnimation(){
+        coinHeadsElement!.removeAttribute("class");
+        void coinHeadsElement!.offsetWidth;
+        coinHeadsElement!.classList.add("coin");
+        coinHeadsElement!.classList.add("heads");
+        
+        coinTailsElement!.removeAttribute("class");
+        void coinTailsElement!.offsetWidth;
+        coinTailsElement!.classList.add("coin");
+        coinTailsElement!.classList.add("tails");
+    }
 
-            // Stop Animation
-            coinHeads!.removeAttribute("class");
-            void coinHeads!.offsetWidth;
-            coinHeads!.classList.add("coin");
+    function StopAnimation(){
+        coinHeadsElement!.removeAttribute("class");
+        void coinHeadsElement!.offsetWidth;
+        coinHeadsElement!.classList.add("coin");
 
-            coinTails!.removeAttribute("class");
-            void coinTails!.offsetWidth;
-            coinTails!.classList.add("coin");
-
-            // Change z-index based on the result
-            if(coinState == 'cara'){
-                coinHeads!.style.zIndex = "100";
-                coinTails!.style.zIndex = "0";
-            }
-            else {
-                coinHeads!.style.zIndex = "0";
-                coinTails!.style.zIndex = "100";
-            }
-            
-        }, 1000);
+        coinTailsElement!.removeAttribute("class");
+        void coinTailsElement!.offsetWidth;
+        coinTailsElement!.classList.add("coin");
     }
 
     return(
-        <div id="coin" onClick={Flip}>
+        <section id="coin" onClick={Flip}>
 
             <img id="coinHeads" src={coinHeads} className="coin" alt="coin heads" />
             <img id="coinTails" src={coinTails} className="coin" alt="coin tails" />
             
-        </div>
+        </section>
     )
 }
