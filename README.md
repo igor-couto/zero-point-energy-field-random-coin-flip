@@ -1,7 +1,7 @@
 # Quantum Zero Point Energy Field Coin Flipper
 
 A true random coin flip generator, powered by a quantum zero point energy field in vacuum.
-Because computer entropy is for loosers.
+Because computer entropy is for losers.
 
 ## How it works
 
