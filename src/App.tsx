@@ -1,7 +1,7 @@
 import React from 'react';
 import Coin from './components/Coin/';
 import Links from './components/Links/';
-import ExplainText from './components/ExplainText/';
+import ExplanatoryText from './components/ExplanatoryText';
 import './App.css';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 
             <main>     
                 <Coin/>
-                <ExplainText/>
+                <ExplanatoryText/>
             </main>
 
             <footer>

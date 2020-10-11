@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-export default function ExplainText() {
+export default function ExplanatoryText() {
     return(
         <section>
             <p>
