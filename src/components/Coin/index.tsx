@@ -12,12 +12,12 @@ export default function Coin() {
     let coinHeadsElement : HTMLElement | null;
     let coinTailsElement : HTMLElement | null;
 
-    const animationTime = 1000;
+    const animationTime = 2000;
 
     const Flip = async function (){
 
-        coinHeadsElement = document.getElementById("coinHeads");
-        coinTailsElement = document.getElementById("coinTails");
+        coinHeadsElement = document.getElementById('coinHeads');
+        coinTailsElement = document.getElementById('coinTails');
 
         if(isFlipping) return;
 
@@ -28,53 +28,62 @@ export default function Coin() {
 
         setTimeout(function () {
             StopAnimation();
-            SetResult();
+            setFlipping(false);
         }, animationTime);
-
-        setFlipping(false);
     }
 
     async function FlipCoin(){
         const response = await fetch(Settings.API);
         const responseModels = await response.json();
+        console.log(responseModels.data[0] % 2 === 0 ? 'deu tails' : 'deu heads');
 
-        if(responseModels.data[0] % 2 === 0)
+        if(responseModels.data[0] % 2 === 0){
             setCoinSide('tails');
-        else 
+            coinHeadsElement!.style.zIndex = '0';
+            coinTailsElement!.style.zIndex = '100';
+        }
+            
+        else {
             setCoinSide('heads');
+            coinHeadsElement!.style.zIndex = '100';
+            coinTailsElement!.style.zIndex = '0';
+        }
+            
     }
 
     function SetResult(){
         if(coinSide === 'tails'){
-            coinHeadsElement!.style.zIndex = "0";
-            coinTailsElement!.style.zIndex = "100";
+            console.log('estado é tails');
+            coinHeadsElement!.style.zIndex = '0';
+            coinTailsElement!.style.zIndex = '100';
         }
         else {
-            coinHeadsElement!.style.zIndex = "100";
-            coinTailsElement!.style.zIndex = "0";
+            console.log('estado é hrads');
+            coinHeadsElement!.style.zIndex = '100';
+            coinTailsElement!.style.zIndex = '0';
         } 
     }
 
     function BeginAnimation(){
-        coinHeadsElement!.removeAttribute("class");
+        coinHeadsElement!.removeAttribute('class');
         void coinHeadsElement!.offsetWidth;
-        coinHeadsElement!.classList.add("coin");
-        coinHeadsElement!.classList.add("heads");
+        coinHeadsElement!.classList.add('coin');
+        coinHeadsElement!.classList.add('heads');
         
-        coinTailsElement!.removeAttribute("class");
+        coinTailsElement!.removeAttribute('class');
         void coinTailsElement!.offsetWidth;
-        coinTailsElement!.classList.add("coin");
-        coinTailsElement!.classList.add("tails");
+        coinTailsElement!.classList.add('coin');
+        coinTailsElement!.classList.add('tails');
     }
 
     function StopAnimation(){
-        coinHeadsElement!.removeAttribute("class");
+        coinHeadsElement!.removeAttribute('class');
         void coinHeadsElement!.offsetWidth;
-        coinHeadsElement!.classList.add("coin");
+        coinHeadsElement!.classList.add('coin');
 
-        coinTailsElement!.removeAttribute("class");
+        coinTailsElement!.removeAttribute('class');
         void coinTailsElement!.offsetWidth;
-        coinTailsElement!.classList.add("coin");
+        coinTailsElement!.classList.add('coin');
     }
 
     return(
