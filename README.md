@@ -15,7 +15,7 @@ Using the [ANU QRNG](https://qrng.anu.edu.au/) API, the random numbers are gener
 
 ## Prerequisites
 
-You will need to have Node.js installed on your computer. To check it, open your terminal and type node -v. If you don't have Node.js installed, download it [here](https://nodejs.org/pt-br/download/)
+You will need to have Node.js installed on your computer. To check it, open your terminal and type node -v. If you don't have Node.js installed, download it [here](https://nodejs.org/pt-br/download/).
 
 ## Running the project
 
