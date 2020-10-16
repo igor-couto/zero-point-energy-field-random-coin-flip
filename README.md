@@ -3,6 +3,8 @@
 A true random coin flip generator, powered by a quantum zero point energy field in vacuum.
 Because computer entropy is for losers.
 
+![](screenshot.png)
+
 ## How it works
 
 Using the [ANU QRNG](https://qrng.anu.edu.au/) API, the random numbers are generated in real-time in the lab by measuring the quantum fluctuations of the vacuum.
