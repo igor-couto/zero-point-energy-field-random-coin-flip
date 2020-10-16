@@ -9,6 +9,10 @@ Because computer entropy is for losers.
 
 Using the [ANU QRNG](https://qrng.anu.edu.au/) API, the random numbers are generated in real-time in the lab by measuring the quantum fluctuations of the vacuum.
 
+### Prerequisites
+
+You will need to have Node.js installed on your computer. To check it, open your terminal and type node -v. If you don't have Node.js installed, download it [here](https://nodejs.org/pt-br/download/)
+
 ## Running the project
 
 In the project directory, you can run:
