@@ -7,7 +7,7 @@ Because computer entropy is for losers.
 
 ## The "Problem"
 
-Computers can generate random numbers through RNG systems by observing data like cpu amps at given time or some fraction of the system time, which is not easy to predict. But at the end of the day, they are only pseudorandom numbers. Not good enough.
+Computers can generate random numbers through RNG systems by observing data like cpu amps at given time or some fraction of the system current time, which is not easy to predict. But at the end of the day, they are only pseudorandom numbers. Not good enough.
 
 ## How it works
 
