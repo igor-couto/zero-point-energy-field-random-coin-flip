@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/zero-point-energy-field-random-coin-flip/static/css/main.b7d6c5f9.chunk.css",
+    "main.js": "/zero-point-energy-field-random-coin-flip/static/js/main.5b1644f3.chunk.js",
+    "main.js.map": "/zero-point-energy-field-random-coin-flip/static/js/main.5b1644f3.chunk.js.map",
+    "runtime-main.js": "/zero-point-energy-field-random-coin-flip/static/js/runtime-main.d68cee63.js",
+    "runtime-main.js.map": "/zero-point-energy-field-random-coin-flip/static/js/runtime-main.d68cee63.js.map",
+    "static/js/2.3d27d87d.chunk.js": "/zero-point-energy-field-random-coin-flip/static/js/2.3d27d87d.chunk.js",
+    "static/js/2.3d27d87d.chunk.js.map": "/zero-point-energy-field-random-coin-flip/static/js/2.3d27d87d.chunk.js.map",
+    "index.html": "/zero-point-energy-field-random-coin-flip/index.html",
+    "precache-manifest.93f448a2371770c2a397a868a9e33706.js": "/zero-point-energy-field-random-coin-flip/precache-manifest.93f448a2371770c2a397a868a9e33706.js",
+    "service-worker.js": "/zero-point-energy-field-random-coin-flip/service-worker.js",
+    "static/css/main.b7d6c5f9.chunk.css.map": "/zero-point-energy-field-random-coin-flip/static/css/main.b7d6c5f9.chunk.css.map",
+    "static/js/2.3d27d87d.chunk.js.LICENSE.txt": "/zero-point-energy-field-random-coin-flip/static/js/2.3d27d87d.chunk.js.LICENSE.txt",
+    "static/media/coin-heads.svg": "/zero-point-energy-field-random-coin-flip/static/media/coin-heads.e35e1baf.svg",
+    "static/media/coin-tails.svg": "/zero-point-energy-field-random-coin-flip/static/media/coin-tails.70db53e3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d68cee63.js",
+    "static/js/2.3d27d87d.chunk.js",
+    "static/css/main.b7d6c5f9.chunk.css",
+    "static/js/main.5b1644f3.chunk.js"
+  ]
+}
