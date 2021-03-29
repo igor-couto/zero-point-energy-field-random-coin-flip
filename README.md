@@ -3,6 +3,8 @@
 A true random coin flip generator, powered by a quantum zero point energy field in vacuum.
 Because computer entropy is for losers.
 
+It's available here, try it out: [https://igor-couto.github.io/zero-point-energy-field-random-coin-flip/](https://igor-couto.github.io/zero-point-energy-field-random-coin-flip/)
+
 ![](screenshot.png)
 
 ## The "Problem"
